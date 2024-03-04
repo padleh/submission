@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 
 def load_dataframe(region):
-    filename = region.lower() + '_df.csv'
+    filename = f"{region.lower()}_df.csv"
     return pd.read_csv(filename)
 
 # Fungsi piechart
