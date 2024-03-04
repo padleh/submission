@@ -1,4 +1,5 @@
 import numpy as np
+import os
 import streamlit as st
 import pandas as pd
 import seaborn as sns
@@ -6,7 +7,8 @@ import matplotlib.pyplot as plt
 
 
 def load_dataframe(region):
-    filename = f"{region.lower()}_df.csv"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    filename = os.path.join(script_dir, f"{region.lower()}_df.csv")
     return pd.read_csv(filename)
 
 # Fungsi piechart
